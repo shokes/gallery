@@ -13,9 +13,6 @@ const Hero = () => {
           <div key={index} className='relative'>
             <Image
               src={`/${url}`}
-              //src={`/${item.images.hero.large}`}
-
-              // src={url}
               width={310}
               height={250}
               alt={item.name}

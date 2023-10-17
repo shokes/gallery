@@ -1,18 +1,21 @@
 import React from "react";
-import { data } from "@/public/data";
+import { data } from "@/utils/data";
 import Image from "next/image";
 
 const Hero = () => {
+  console.log(data);
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-[23px] md:gap-10 w-[327px] md:w-[688px] lg:w-[1360px] mx-auto">
       {data.map((item, index) => {
+        //console.log(item);
         const url = item.images.hero.large;
         const urlSmallScreen = item.images.hero.small;
         return (
           <div key={index} className="relative">
             <Image
               //src={`/${item.images.hero.large}`}
-              src={`/${url}`}
+              //src={`/${url}`}
+              src={url}
               width={310}
               height={250}
               alt={item.name}
